@@ -1,0 +1,9 @@
+Azul
+Preto
+Amarelo
+Vermelho
+Cinza
+Laranja
+Rosa
+Branco
+Cor da pele

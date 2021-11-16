@@ -1,0 +1,7 @@
+Busque por Brazil no countries.txt .
+Busque novamente por brazil , mas agora utilizando o lower case .
+Para os próximos exercícios, crie um novo arquivo chamado phrases.txt e adicione algumas frases à sua escolha. Não precisa criar o arquivo pelo terminal.
+Busque pelas frases que não contenham a palavra fox .
+Conte o número de palavras do arquivo phrases.txt .
+Conte o número de linhas do arquivo phrases.txt .
+Crie os arquivos empty.tbt e empty.pdf .
