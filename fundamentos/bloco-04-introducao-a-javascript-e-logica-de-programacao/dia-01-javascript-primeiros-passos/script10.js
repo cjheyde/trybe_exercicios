@@ -10,3 +10,19 @@
 // valorCustoTotal = valorCusto + impostoSobreOCusto
 // lucro = valorVenda - valorCustoTotal (lucro de um produto)
 
+const custo = 3;
+const valorVenda = 60;
+
+let lucroMil;
+const imposto = 0.2;
+
+if (custo < 0 || valorVenda < 0) {
+    console.log("Erro - Pelo menos um dos valores inseridos é menor do que zero, favor rever!");
+}
+else {
+    lucroMil = 1000*(valorVenda - (3+3*imposto));
+    console.log("o Lucro para a venda de mil unidades é de", lucroMil);
+}
+
+
+
