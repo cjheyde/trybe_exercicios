@@ -1,55 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <title>CSS Básico</title>
-    <style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Básico - Exercício.3.2</title>
+  <style>
+    h1 {
+      font-size: 65px;
+      color: orange;
+      font-family: sans-serif;
+    }
 
-h1 {
-    font-size: 65px;
-    color: orange;
-    font-family: sans-serif;
-}
+   .cores {
+      background-color: blue;
+    }
 
-.cores {
-    background-color: palegoldenrod;
-}
+    p {
+      font-weight: 600;
+      font-size: 3em;
+    }
 
-p {
-  font-weight: 600;
-  font-size: 3em;
-}
+    body {
+      font-size: 16px;
+      font-style: normal;
+      line-height:  2em;
+      text-align: center;
+      text-decoration: dotted;
+    }
 
-body {
-  font-size: 16px;
-  font-style: normal;
-  line-height:  2em;
-  text-align: center;
-  text-decoration: dotted;
-}
+    #Amarelo {
+    background-color: yellow;
+    }
 
-#Amarelo {
-background-color: yellow;
-}
+    #Vermelho {
+    background-color:red;
+    }
 
-#Vermelho {
-background-color:red;
-}
+    #Marrom {
+    background-color: brown;
+    }
 
-#Marrom {
-background-color: brown;
-}
+  </style>
+</head>
+<body>
+  <h1>Exercícios 3.2</h1>
 
-    </style>
-  </head>
-  <body>
-    <h1>Exercícios 3.2</h1>
-    <p class="cores">Qual é a sua cor favorita?</p>
-    <ul class="cores">
-      <li id="Amarelo">Amarelo</li>
-      <li id="Vermelho">Vermelho</li>
-      <li id="Marrom">Marrom</li>
+<!-- 1 - Modifique o tamanho do h1 para 65 pixels
+2 - Modifique a cor do texto do h1 para laranja
+3 - Modifique a cor de fundo da lista não ordenada
+4 - Crie uma classe para modificar a cor de fundo da tag p e da ul ao mesmo tempo -->
+
+  <p class="cores">Qual é a sua cor favorita?</p>
+
+  <ul class="cores">
+    <li id="Amarelo">Amarelo</li>
+    <li id="Vermelho">Vermelho</li>
+    <li id="Marrom">Marrom</li>
     </ul>
 
-  </body>
+</body>
 </html>
