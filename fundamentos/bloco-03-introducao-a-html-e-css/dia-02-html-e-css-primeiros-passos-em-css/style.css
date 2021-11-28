@@ -1,15 +1,8 @@
-  h1 {
+h1 {
     font-size: 65px;
     color: orange;
     font-family: sans-serif;
     font-weight: bold;
-  }
-
- .cores {
-    background-color: blue;
-    line-height: 40px;
-    text-align: right;
-    text-decoration: underline;
   }
 
   body {
@@ -27,8 +20,15 @@
     font-style: italic;
   }
 
+  .cores {
+    background-color: blue;
+     text-align: left;
+    text-decoration: underline;
+  }
+
   #Amarelo {
     background-color: yellow;
+    line-height: 50px;
   }
 
   #Vermelho {
