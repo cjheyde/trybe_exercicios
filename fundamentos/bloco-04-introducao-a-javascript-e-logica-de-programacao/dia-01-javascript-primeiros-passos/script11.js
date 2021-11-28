@@ -31,3 +31,55 @@
 // Resultado: R$ 2.612,55.
 // Dica: que tal identificar as alíquotas com variáveis de nomes explicativos?
 
+let salarioBruto = 3000;
+let INSS;
+let salarioBase;
+let IR;
+let parcelaIR;
+let salarioLiquido;
+
+if (salarioBruto <= 1556.94) {
+    INSS = salarioBruto*0.08;
+}
+else if (salarioBruto <= 2594.92) {
+    INSS = salarioBruto*0.09;
+}
+else if (salarioBruto <= 5189.82) {
+    INSS = salarioBruto*0.11;
+}
+else { 
+    INSS = 570.88;
+}
+
+// console.log(INSS);
+
+salarioBase = salarioBruto - INSS;
+
+if (salarioBase <= 1903.98) {
+    IR = 0;
+    parcelaIR = 0;
+} 
+else if (salarioBase <= 2826.65) {
+    IR = 0.075;
+    parcelaIR = 142.80;
+}
+else if (salarioBase <= 3751.05) {
+    IR = 0.15;
+    parcelaIR = 354.80;
+}
+else if (salarioBase <= 4664.68) {
+    IR = 0.225;
+    parcelaIR = 636.13;
+}
+else {
+    IR = 0.275;
+    parcelaIR = 869.36;
+}
+
+IR = salarioBase*IR - parcelaIR;
+
+// console.log(IR);
+
+salarioLiquido = salarioBase - IR;
+
+console.log(salarioLiquido);
