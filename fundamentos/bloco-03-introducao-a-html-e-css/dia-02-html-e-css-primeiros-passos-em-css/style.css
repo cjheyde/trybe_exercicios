@@ -1,11 +1,15 @@
-h1 {
+  h1 {
     font-size: 65px;
     color: orange;
     font-family: sans-serif;
+    font-weight: bold;
   }
 
  .cores {
     background-color: blue;
+    line-height: 40px;
+    text-align: right;
+    text-decoration: underline;
   }
 
   body {
@@ -14,4 +18,23 @@ h1 {
     line-height:  2em;
     text-align: center;
     text-decoration: dotted;
+  }
+
+  p {
+    font-weight:600
+    font-size: 3em;
+    font-family: courier;
+    font-style: italic;
+  }
+
+  #Amarelo {
+    background-color: yellow;
+  }
+
+  #Vermelho {
+    background-color: red;
+  }
+
+  #Marrom {
+    background-color: brown;
   }
