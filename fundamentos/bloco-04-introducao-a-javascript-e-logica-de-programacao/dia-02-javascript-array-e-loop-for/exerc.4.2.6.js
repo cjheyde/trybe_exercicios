@@ -43,22 +43,50 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // 5. Utilizando for, descubra qual o maior valor contido no array e
 // imprima-o;
-for (let numero of numbers) {
+// let maiorValor = 0;
 
-}
+// for (let numero of numbers) {
+//     if (numero > maiorValor) {
+//         maiorValor = numero;
+//     }
+// }
+
+// console.log(maiorValor);
 
 
 // 6. Descubra quantos valores ímpares existem no array e imprima
 // o resultado. Caso não exista nenhum, imprima a
 // mensagem: "nenhum valor ímpar encontrado";
 
+// let impares = [];
 
+// for (let numero of numbers) {
+//     if (numero % 2 !== 0) {
+//         impares.push(numero);
+//     }
+// }
+
+// console.log(impares);
 
 // 7. Utilizando for , descubra qual o menor valor contido 
 // no array e imprima-o;
+// let menorValor = numbers[0];
+
+// for (let numero of numbers) {
+//     if (numero < menorValor) {
+//         menorValor = numero;
+//     }
+// }
+
+// console.log(menorValor);
 
 // 8. Utilizando for , crie um array que vá de 1 até 25 e imprima 
 // o resultado;
+let arrayA25 = [];
+
+for (let index; index < 25; index += 1) {
+    arrayA25.push() =
+}
 
 // 9. Utilizando o array criado no exercício anterior imprima o 
 // resultado da divisão de cada um dos elementos por 2 .
