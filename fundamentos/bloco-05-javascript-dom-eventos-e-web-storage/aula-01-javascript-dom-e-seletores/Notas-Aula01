@@ -1,0 +1,10 @@
+Bloco 5 - DOM
+
+getElementById 
+.document
+.innerHTML
+.innerText
+
+console.Log(document.getElementById("ẗeste").innerHTML
+
+.style -> conteudo dos estilos
