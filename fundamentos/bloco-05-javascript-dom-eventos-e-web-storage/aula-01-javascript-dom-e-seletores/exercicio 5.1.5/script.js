@@ -12,29 +12,37 @@
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
 function changeText() {
-    let visao = document.getElementsByTagName("p")[1].innerText =
-    "Em 2 anos estarei trabalhando como Desenvolvedora Web pleno, na Alemanha, ganhando " + 
-    "muito bem em Euros, e sustentando toda a minha família";
-    }
+  let visao = (document.getElementsByTagName("p")[1].innerText =
+    "Em 2 anos estarei trabalhando como Desenvolvedora Web pleno, na Alemanha, ganhando " +
+    "muito bem em Euros, e sustentando toda a minha família");
+}
 changeText();
 
 function changeBackColorGreen() {
-    let mainContent = document.getElementsByClassName("main-content")[0].style.background = "rgb(76,164,109)";
+  let mainContent = (document.getElementsByClassName(
+    "main-content"
+  )[0].style.background = "rgb(76,164,109)");
 }
 changeBackColorGreen();
 
 function changeBackWhite() {
-    let centerContent = document.getElementsByClassName("center-content")[0].style.background = "white";
+  let centerContent = (document.getElementsByClassName(
+    "center-content"
+  )[0].style.background = "white");
 }
 changeBackWhite();
 
 function correcaoTexto() {
-    let textoH1 = document.getElementsByTagName("h1")[0].innerText = "Exercício 5.1 - JavaScript";
+  let textoH1 = (document.getElementsByTagName("h1")[0].innerText =
+    "Exercício 5.1 - JavaScript");
 }
 correcaoTexto();
 
 function textoMaiusculo() {
-    let tagP = document.getElementsByTagName("p")[0].innerHTML.toUpperCase();
+  let tagP = document.getElementsByTagName("p")[0].innerHTML.toUpperCase();
 }
 textoMaiusculo();
 
+// function  () {
+
+// }
