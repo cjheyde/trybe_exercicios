@@ -39,10 +39,15 @@ function correcaoTexto() {
 correcaoTexto();
 
 function textoMaiusculo() {
-  let tagP = document.getElementsByTagName("p")[0].innerHTML.toUpperCase();
+  let tagP = document.getElementsByTagName("p")[0];
+  tagP.innerHTML = tagP.innerHTML.toUpperCase();
 }
 textoMaiusculo();
 
-// function  () {
-
-// }
+function mostraParagrafos() {
+  let ps = document.getElementsByTagName("p");
+  for (let i = 0; i < ps.length; i += 1) {
+    console.log(ps[i].innerHTML);
+  }
+}
+mostraParagrafos();
