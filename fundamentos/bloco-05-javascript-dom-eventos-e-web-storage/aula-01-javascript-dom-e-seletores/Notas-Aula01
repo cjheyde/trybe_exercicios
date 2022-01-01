@@ -8,3 +8,29 @@ getElementById
 console.Log(document.getElementById("ẗeste").innerHTML
 
 .style -> conteudo dos estilos
+
+document.getElementsByClassName("nomedaclasse")[indice]
+
+nesse caso Eements = lista, pra percorrer usa-se o for
+
+exemplo:
+
+let pilotosDeF1 = document.getElementsByClassName("piloto-f1-atual");
+
+for (let i=0; i < pilotoDeF1.length; i += 1) {
+pilotosDeF1[i].innerText = "Lewis Hamilton";
+}
+
+getElementsByTagName -> sempre é ima lista
+
+document.getElementsByTagName("h4")[0];
+
+document.qyerySelector("#Dona") -> captura elementos de CSS, so retorna o primeiro elemento
+
+document.querySelectorAll("jjj")  -> retorna todos os elementos de CSS
+
+https://www.w3schools.com/cssref/css_selectors.asp -> verificar
+
+https://teamtreehouse.com/community/understanding-the-difference-between-an-htmlcollection-and-a-nodelist
+
+
