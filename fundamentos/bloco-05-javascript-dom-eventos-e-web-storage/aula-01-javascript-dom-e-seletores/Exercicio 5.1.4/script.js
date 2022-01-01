@@ -8,7 +8,12 @@ const emergencyTasksTitle2 = document.querySelectorAll(".emergency-tasks h3")[1]
 
 const foot = document.querySelector("footer").style.backgroundColor = "rgb(0, 58, 55)";
 
-const
+const noEmergencyTasks = document.querySelectorAll(".no-emergency-tasks")[0].style.backgroundColor = "rgb(249, 230, 84)";
+
+const noEmergencyTasksTitle1 = document.querySelectorAll(".no-emergency-tasks h3")[0].style.backgroundColor = "rgb(39, 42, 42)";
+
+const noEmergencyTasksTitle2 = document.querySelectorAll(".no-emergency-tasks h3")[1].style.backgroundColor = "rgb(39, 42, 42)";
+
 
 // const header = document.getElementById('header-container');
 // header.style.backgroundColor = 'rgb(0, 176, 105)';
