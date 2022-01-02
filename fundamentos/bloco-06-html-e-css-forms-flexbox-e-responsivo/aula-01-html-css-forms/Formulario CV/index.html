@@ -10,28 +10,28 @@
 </head>
 
 <body>
-    <div class="line-content">
-        <label for="name">Nome: </label>
-        <input type="text" name="nome" id="name" placeholder="Digite seu Nome" maxlength="40" required></br></br>
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email" placeholder="Digite seu Email" maxlength="50" required></br></br>
-        <label for="cpf-number"> CPF: </label>
-        <input type="number" name="cpf" id="cpf-number" placeholder="Digite apenas números" maxlength="11" required></br></br>
-        <label for="address">Endereço: </label>
-        <input type="text" name="endereco" id="address" placeholder="Digite seu Endereço" maxlength="200"
-            required></br></br>
-        <label for="city">Cidade: </label>
-        <input type="text" name="cidade" id="city" placeholder="Digita sua Cidade" maxlength="28" required></br></br>
-        <label for="state">Estado: </label>
-        <select name="estado" id="state" required></select></br></br>
-    </div>
-    <!-- Cidade - Texto
-Limite de 28 caracteres
-Campo obrigatório
-Estado - Select
-Todos os estados do Brasil
-Utilize estruturas de repetição via JavaScript para gerar os <option>
-Campo obrigatório
+    <fieldset>
+        <div class="line-content">
+            <label for="name">Nome: </label>
+            <input type="text" name="nome" id="name" placeholder="Digite seu Nome" maxlength="40" required></br></br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Digite seu Email" maxlength="50"
+                required></br></br>
+            <label for="cpf-number"> CPF: </label>
+            <input type="number" name="cpf" id="cpf-number" placeholder="Digite apenas números" maxlength="11"
+                required></br></br>
+            <label for="address">Endereço: </label>
+            <input type="text" name="endereco" id="address" placeholder="Digite seu Endereço" maxlength="200"
+                required></br></br>
+            <label for="city">Cidade: </label>
+            <input type="text" name="cidade" id="city" placeholder="Digita sua Cidade" maxlength="28"
+                required></br></br>
+            <label for="state">Estado: </label>
+            <select name="estado" id="state" required></select></br></br>
+             <option disabled selected value></option>
+        </div>
+    </fieldset>
+    <!-- 
 Tipo - Radio Button
 Casa, Apartamento
 Campo obrigatório -->
