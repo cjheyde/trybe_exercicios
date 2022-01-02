@@ -91,3 +91,45 @@ function createFridayButton(buttonName) {
 createFridayButton('Sexta-feira');
 
 //exercicio 5
+function displayFridays(fridaysArray) {
+  let getFridayButton = document.querySelector('#btn-friday');
+  let fridays = document.getElementsByClassName('friday');
+  let newFridayText = 'SEXTOU o/';
+
+  getFridayButton.addEventListener('click', function() {
+  for (let index = 0; index < fridays.length; index += 1) {
+    if (fridays[index].innerHTML !== newFridayText) {
+        fridays[index].innerHTML = newFridayText;
+    } else {
+        fridays[index].innerHTML = fridaysArray[index];
+      }
+    }
+  })
+};
+
+let dezFridays = [ 4, 11, 18, 25 ];
+displayFridays(dezFridays);
+
+//exercicio 6
+function dayMouseOver() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+};
+
+function dayMouseOut() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseout', function(event) {
+    event.target.style.fontWeight = '200';
+    event.target.style.fontSize = '20px';
+  })
+};
+
+dayMouseOver();
+dayMouseOut();
+
+//exercicio 7
