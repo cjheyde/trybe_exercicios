@@ -19,16 +19,18 @@
 6 - Adicione o atributo autocomplete="off" para o campo de email.
 7 - Adicione o atributo autofocus para o campo de email. -->
         <p>Digite seu e-mail e senha, para fazer o login:</p>
-        <label for="email">E-Mail: <input type="email" placeholder="Digite seu E-Mail:" required autocomplete="off"  autofocus class="email"
-                name="email"></label>
-        <br><br>
-        <label for="senha">Senha: <input type="password" 
-            placeholder="Digite sua Senha:" required class="senha" name="senha"></label>
-        <p><label for="lembreme"><input type="checkbox" id="lembreme" value="lembreme">
-        Lembre-me </label></form></body></p>
-        <br>
+        <form>
+            E-Mail: <input type="email" placeholder="Digite seu E-Mail:" name="email" required autocomplete="off"
+                autofocus></br>
+            Senha: <input type="password" placeholder="Digite sua Senha:" name="senha" required></br>
+            Lembre-me <label for="lembreme"><input type="checkbox" name="lembreme" id="lembreme"
+                    value="lembreme"></label></br>
+        </form>
+</body>
+</p>
+<br>
 <button type="button">Entrar</button>
-    </form>
+</form>
 </body>
 
 </html>
