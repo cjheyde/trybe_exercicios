@@ -38,9 +38,9 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 5: Introdução - JavaScript - Projetos :hourglass_flowing_sand:
 
 - [x] 5-1: _JavaScript - DOM e seletores_
-- [ ] 5-2: _JavaScript - Trabalhando com elementos_
-- [ ] 5-3: _JavaScript - Eventos_
-- [ ] 5-4: _JavaScript - Web Storage_
+- [x] 5-2: _JavaScript - Trabalhando com elementos_
+- [x] 5-3: _JavaScript - Eventos_
+- [x] 5-4: _JavaScript - Web Storage_
 - [ ] 5-5: _[Projeto - Meme Generator]()_
 - [ ] 5-6: _[Projeto - Arte com Pixels]()_
 - [ ] 5-7: _[Projeto - Lista de tarefas]()_
@@ -49,7 +49,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 6: HTML & CSS avançado :hourglass_flowing_sand:
 
-- [ ] 6-1: _HTML & CSS - Forms_
+- [x] 6-1: _HTML & CSS - Forms_
 - [ ] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
 - [ ] 6-3: _CSS Flexbox - Part 1_
 - [ ] 6-4: _CSS Flexbox - Part 2_
