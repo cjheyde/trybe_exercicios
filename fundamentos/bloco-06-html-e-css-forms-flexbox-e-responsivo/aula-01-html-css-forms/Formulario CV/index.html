@@ -10,32 +10,76 @@
 </head>
 
 <body>
-    <fieldset>
-        <div class="line-content">
-            <label for="name">Nome: </label>
-            <input type="text" name="nome" id="name" placeholder="Digite seu Nome" maxlength="40" required></br></br>
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email" placeholder="Digite seu Email" maxlength="50"
-                required></br></br>
-            <label for="cpf-number"> CPF: </label>
-            <input type="number" name="cpf" id="cpf-number" placeholder="Digite apenas números" maxlength="11"
-                required></br></br>
-            <label for="address">Endereço: </label>
-            <input type="text" name="endereco" id="address" placeholder="Digite seu Endereço" maxlength="200"
-                required></br></br>
-            <label for="city">Cidade: </label>
-            <input type="text" name="cidade" id="city" placeholder="Digita sua Cidade" maxlength="28"
-                required></br></br>
-            <label for="state">Estado: </label>
-            <select name="estado" id="state" required></select></br></br>
-             <option disabled selected value></option>
-        </div>
-    </fieldset>
-    <!-- 
-Tipo - Radio Button
-Casa, Apartamento
-Campo obrigatório -->
+    <header class="form_header">
+        <h1>Formulário para Cadastro de Currículo</h1>
+        <p>Preencha os campos abaixo</p>
+    </header>
+    <main>
+        <form id="cv-form">
+            <div class="form-row">
+                <fieldset>
+                    <div class="line-content">
+                        <p>Dados Pessoais:</p>
+                        <label for="name">Nome: </label>
+                        <input type="text" name="nome" id="name" placeholder="Digite seu Nome" maxlength="40"
+                            required></br></br>
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu Email" maxlength="50"
+                            required></br></br>
+                        <label for="cpf-number"> CPF: </label>
+                        <input type="number" name="cpf" id="cpf-number" placeholder="Digite apenas números"
+                            maxlength="11" required></br></br>
+                        <label for="address">Endereço: </label>
+                        <textarea type="text" name="endereco" id="address" placeholder="Digite seu Endereço"
+                            maxlength="200" required></textarea></br></br>
+                        <label for="city">Cidade: </label>
+                        <input type="text" name="cidade" id="city" placeholder="Digita sua Cidade" maxlength="28"
+                            required></br></br>
+                        <label for="state">Estado: </label>
+                        <select name="Estado" id="state" required></select></br>
+                        <option disabled selected value></option>
+                        Tipo de Residência:
+                        <input type="radio" id="house" name="tipo_logradouro" value="Casa" required>
+                        <label for="house">Casa </label>
+                        <input type="radio" id="apartment" name="tipo_logradouro" value="Apartamento" required>
+                        <label for="apartment">Apartamento </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="line-content">
+                        <p>Dados do seu último emprego:</p>
+                        <label for="cv">Resumo do currículo: </label>
+                        <textarea type="text" id="cv" name="Currículo" maxlength="1000" cols="10" rows="20"
+                            required></textarea></br></br>
+                        <label for="role">Cargo: </label>
+                        <input type="text" id="role" name="Cargo" maxlength="40" required></br></br>
+                        <label for="roledescription">Descrição do cargo: </label>
+                        <textarea type="text" id="roledescription" name="Cargo" maxlength="500"
+                            required></textarea></br>
+                        <label for="startdate">Data de início: </label>
+                        <input type="date" id="startdate" name="DataInício" required></br></br>
 
+                        <!-- Verificar o formato da data dd/mm/aaaa .
+            O dia deve ser > 0 e <= 31.
+            O mês deve ser > 0 e <= 12.
+            O ano não pode ser negativo.
+            Caso alguma das condições seja inválida no momento do envio do formulário, exibir via alert uma mensagem de erro contextualizada. -->
+
+                        <!-- 3. Logo abaixo do formulário, crie um botão que:
+            Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault() . Note que isso vai impedir as validações do HTML ao fazer o submit
+            Implemente, agora, no Javascript , as validações que foram pedidas ao longo da montagem do formulário.
+            Caso todos os dados sejam válidos, monte uma <div> com o consolidado dos dados que foram inseridos no formulário.
+            Caso haja algum dado inválido, mostre em uma <div> uma mensagem de erro. Se o erro for na Data de Início , a mensagem deve ser contextualizada. -->
+                        <button class="submit-button" type="submit">Enviar</button>
+
+                        <!-- 4. Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também. -->
+                        <button class="clear-button" type="button">Limpar</button>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+    </Main>
+    <section class="form-data"></section>
     <script src="script.js"></script>
 </body>
 
