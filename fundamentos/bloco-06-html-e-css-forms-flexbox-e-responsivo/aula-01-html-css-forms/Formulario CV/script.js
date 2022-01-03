@@ -39,279 +39,279 @@ function createStateOptions() {
   }
 }
 
-let inputs = {
-  name: {
-    maxLength: 40,
-    required: true,
-  },
-  email: {
-    maxLength: 50,
-    required: true,
-  },
-  cpf: {
-    maxLength: 11,
-    required: true,
-  },
-  address: {
-    maxLength: 200,
-    required: true,
-  },
-  city: {
-    maxLength: 28,
-    required: true,
-  },
-  state: {
-    type: "select",
-    required: true,
-  },
-  houseType: {
-    type: "radio",
-    required: true,
-  },
-  resume: {
-    maxLength: 1000,
-    required: true,
-  },
-  role: {
-    maxLength: 40,
-    required: true,
-  },
-  roleDescription: {
-    maxLength: 500,
-    required: true,
-  },
-  startDate: {
-    type: "date",
-    required: true,
-  },
-};
+// let inputs = {
+//   name: {
+//     maxLength: 40,
+//     required: true,
+//   },
+//   email: {
+//     maxLength: 50,
+//     required: true,
+//   },
+//   cpf: {
+//     maxLength: 11,
+//     required: true,
+//   },
+//   address: {
+//     maxLength: 200,
+//     required: true,
+//   },
+//   city: {
+//     maxLength: 28,
+//     required: true,
+//   },
+//   state: {
+//     type: "select",
+//     required: true,
+//   },
+//   houseType: {
+//     type: "radio",
+//     required: true,
+//   },
+//   resume: {
+//     maxLength: 1000,
+//     required: true,
+//   },
+//   role: {
+//     maxLength: 40,
+//     required: true,
+//   },
+//   roleDescription: {
+//     maxLength: 500,
+//     required: true,
+//   },
+//   startDate: {
+//     type: "date",
+//     required: true,
+//   },
+// };
 
-function defaultValidation(input, name) {
-  let trimmed = input.value.trim();
-  let validation = inputs[name];
+// function defaultValidation(input, name) {
+//   let trimmed = input.value.trim();
+//   let validation = inputs[name];
 
-  if (validation.required && trimmed.length === 0) {
-    return false;
-  }
+//   if (validation.required && trimmed.length === 0) {
+//     return false;
+//   }
 
-  if (validation.maxLength && trimmed.length > validation.maxLength) {
-    return false;
-  }
+//   if (validation.maxLength && trimmed.length > validation.maxLength) {
+//     return false;
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
-function dateValidation(input, name) {
-  if (input.value.length === 0) {
-    return {
-      message: "A data não foi preenchida!",
-    };
-  }
+// function dateValidation(input, name) {
+//   if (input.value.length === 0) {
+//     return {
+//       message: "A data não foi preenchida!",
+//     };
+//   }
 
-  let regex = /^\d\d\/\d\d\/\d\d\d\d$/;
+//   let regex = /^\d\d\/\d\d\/\d\d\d\d$/;
 
-  if (!regex.test(input.value)) {
-    return {
-      message: "Data: Formato inválido",
-    };
-  }
+//   if (!regex.test(input.value)) {
+//     return {
+//       message: "Data: Formato inválido",
+//     };
+//   }
 
-  let splitted = input.value.split("/");
-  let day = splitted[0];
-  let month = splitted[1];
-  let year = splitted[2];
+//   let splitted = input.value.split("/");
+//   let day = splitted[0];
+//   let month = splitted[1];
+//   let year = splitted[2];
 
-  if (day < 0 || day > 30) {
-    return {
-      message: "Dia inválido",
-    };
-  }
+//   if (day < 0 || day > 30) {
+//     return {
+//       message: "Dia inválido",
+//     };
+//   }
 
-  if (month < 0 || month > 12) {
-    return {
-      message: "Mês inválido",
-    };
-  }
+//   if (month < 0 || month > 12) {
+//     return {
+//       message: "Mês inválido",
+//     };
+//   }
 
-  if (year < 0) {
-    return {
-      message: "Ano inválido",
-    };
-  }
+//   if (year < 0) {
+//     return {
+//       message: "Ano inválido",
+//     };
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
-function getSelectedOption(select) {
-  return select.options[select.selectedIndex];
-}
+// function getSelectedOption(select) {
+//   return select.options[select.selectedIndex];
+// }
 
-function selectValidation(select, name) {
-  let option = getSelectedOption(select);
-  let validation = inputs[name];
+// function selectValidation(select, name) {
+//   let option = getSelectedOption(select);
+//   let validation = inputs[name];
 
-  if (validation.required && (!option || option.disabled)) {
-    return false;
-  }
+//   if (validation.required && (!option || option.disabled)) {
+//     return false;
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
-function radioValidation(radio, name) {
-  let checked = document.querySelector(`[name=${name}]:checked`);
+// function radioValidation(radio, name) {
+//   let checked = document.querySelector(`[name=${name}]:checked`);
 
-  if (checked === null) {
-    return false;
-  }
+//   if (checked === null) {
+//     return false;
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
-let validationStrategies = {
-  default: defaultValidation,
-  date: dateValidation,
-  select: selectValidation,
-  radio: radioValidation,
-};
+// let validationStrategies = {
+//   default: defaultValidation,
+//   date: dateValidation,
+//   select: selectValidation,
+//   radio: radioValidation,
+// };
 
-function validateInput(inputName) {
-  let inputType = inputs[inputName].type;
-  let input = document.querySelector(`[name=${inputName}]`);
+// function validateInput(inputName) {
+//   let inputType = inputs[inputName].type;
+//   let input = document.querySelector(`[name=${inputName}]`);
 
-  if (inputType) {
-    let validationFunction = validationStrategies[inputType];
-    return validationFunction(input, inputName);
-  }
+//   if (inputType) {
+//     let validationFunction = validationStrategies[inputType];
+//     return validationFunction(input, inputName);
+//   }
 
-  return validationStrategies.default(input, inputName);
-}
+//   return validationStrategies.default(input, inputName);
+// }
 
-function renderErrorMessages(messages) {
-  let form = document.querySelector("#cv-form");
-  let messageDiv = document.createElement("div");
-  messageDiv.className = "error";
-  form.prepend(messageDiv);
+// function renderErrorMessages(messages) {
+//   let form = document.querySelector("#cv-form");
+//   let messageDiv = document.createElement("div");
+//   messageDiv.className = "error";
+//   form.prepend(messageDiv);
 
-  for (let message of messages) {
-    let p = document.createElement("p");
-    p.innerText = message;
+//   for (let message of messages) {
+//     let p = document.createElement("p");
+//     p.innerText = message;
 
-    messageDiv.appendChild(p);
-  }
-}
+//     messageDiv.appendChild(p);
+//   }
+// }
 
-function defaultRendering(input) {
-  let p = document.createElement("p");
-  p.innerText = input.value;
+// function defaultRendering(input) {
+//   let p = document.createElement("p");
+//   p.innerText = input.value;
 
-  return p;
-}
+//   return p;
+// }
 
-function radioRendering(input) {
-  let p = document.createElement("p");
-  let name = input.getAttribute("name");
-  let checked = document.querySelector(`[name=${name}]:checked`);
+// function radioRendering(input) {
+//   let p = document.createElement("p");
+//   let name = input.getAttribute("name");
+//   let checked = document.querySelector(`[name=${name}]:checked`);
 
-  if (checked) {
-    p.innerText = checked.value;
-  }
+//   if (checked) {
+//     p.innerText = checked.value;
+//   }
 
-  return p;
-}
+//   return p;
+// }
 
-function selectRendering(input) {
-  let p = document.createElement("p");
-  let option = getSelectedOption(input);
-  p.innerText = option.value;
+// function selectRendering(input) {
+//   let p = document.createElement("p");
+//   let option = getSelectedOption(input);
+//   p.innerText = option.value;
 
-  return p;
-}
+//   return p;
+// }
 
-let renderStrategies = {
-  default: defaultRendering,
-  radio: radioRendering,
-  select: selectRendering,
-};
+// let renderStrategies = {
+//   default: defaultRendering,
+//   radio: radioRendering,
+//   select: selectRendering,
+// };
 
-function renderData() {
-  let dataDiv = document.createElement("div");
-  dataDiv.className = "data";
+// function renderData() {
+//   let dataDiv = document.createElement("div");
+//   dataDiv.className = "data";
 
-  let form = document.querySelector("#cv-form");
-  form.prepend(dataDiv);
+//   let form = document.querySelector("#cv-form");
+//   form.prepend(dataDiv);
 
-  for (let name in inputs) {
-    let inputType = inputs[name].type;
-    let input = document.querySelector(`[name=${name}]`);
+//   for (let name in inputs) {
+//     let inputType = inputs[name].type;
+//     let input = document.querySelector(`[name=${name}]`);
 
-    let element;
+//     let element;
 
-    if (renderStrategies[inputType]) {
-      element = renderStrategies[inputType](input, dataDiv);
-    } else {
-      element = renderStrategies.default(input, dataDiv);
-    }
+//     if (renderStrategies[inputType]) {
+//       element = renderStrategies[inputType](input, dataDiv);
+//     } else {
+//       element = renderStrategies.default(input, dataDiv);
+//     }
 
-    dataDiv.appendChild(element);
-  }
-}
+//     dataDiv.appendChild(element);
+//   }
+// }
 
-function validateData() {
-  let validationsList = {};
+// function validateData() {
+//   let validationsList = {};
 
-  for (let inputName in inputs) {
-    let isValid = validateInput(inputName);
-    validationsList[inputName] = isValid;
-  }
+//   for (let inputName in inputs) {
+//     let isValid = validateInput(inputName);
+//     validationsList[inputName] = isValid;
+//   }
 
-  let counter = 0;
-  let messages = [];
+//   let counter = 0;
+//   let messages = [];
 
-  for (let index in validationsList) {
-    if (validationsList[index] === false) {
-      counter += 1;
-    }
+//   for (let index in validationsList) {
+//     if (validationsList[index] === false) {
+//       counter += 1;
+//     }
 
-    if (validationsList[index].message) {
-      counter += 1;
-      messages.push(validationsList[index].message);
-    }
-  }
+//     if (validationsList[index].message) {
+//       counter += 1;
+//       messages.push(validationsList[index].message);
+//     }
+//   }
 
-  return {
-    errorQtd: counter,
-    messages,
-  };
-}
+//   return {
+//     errorQtd: counter,
+//     messages,
+//   };
+// }
 
-function clearDivs() {
-  let errorDivs = document.querySelectorAll(".error");
+// function clearDivs() {
+//   let errorDivs = document.querySelectorAll(".error");
 
-  for (div of errorDivs) {
-    div.remove();
-  }
+//   for (div of errorDivs) {
+//     div.remove();
+//   }
 
-  let dataDiv = document.querySelector(".data");
+//   let dataDiv = document.querySelector(".data");
 
-  if (dataDiv) {
-    dataDiv.remove();
-  }
-}
+//   if (dataDiv) {
+//     dataDiv.remove();
+//   }
+// }
 
 function handleSubmit(event) {
   event.preventDefault();
 
-  let validation = validateData();
+  // let validation = validateData();
 
   clearDivs();
 
-  if (validation.errorQtd === 0) {
-    renderData();
-  } else {
-    validation.messages.unshift("Dados Inválidos");
+  // if (validation.errorQtd === 0) {
+  //   renderData();
+  // } else {
+  //   validation.messages.unshift("Dados Inválidos");
 
-    renderErrorMessages(validation.messages);
-  }
+  //   renderErrorMessages(validation.messages);
+  // }
 }
 
 function clearFields() {
