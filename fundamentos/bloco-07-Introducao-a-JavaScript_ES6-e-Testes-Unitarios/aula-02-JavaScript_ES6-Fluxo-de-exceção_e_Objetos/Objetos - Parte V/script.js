@@ -67,6 +67,7 @@ console.log('Mudando a propriedade lastName através do objeto person');
 console.log(clone); // Output: { name: 'Maria', lastName: 'Ferreira' }
 console.log(person); // Output: { name: 'Maria', lastName: 'Ferreira' }
 
+<<<<<<< HEAD
 //Quando se faz o que foi feito no exemplo mais acima, ao criar uma nova variável para armazenar o retorno do método Object.assign , cria-se apenas um outro "caminho" para modificar ou acessar os dados do objeto destino (nesse caso, person ). No exemplo abaixo, é apresentada outra forma de se copiar um objeto
 
 const obj = { value1: 10, value2: 11 };
@@ -90,3 +91,6 @@ const person = {
   console.log(person);
 
   //
+=======
+//
+>>>>>>> 8c0a0907994c652656fd8d0a40e17afb14706671

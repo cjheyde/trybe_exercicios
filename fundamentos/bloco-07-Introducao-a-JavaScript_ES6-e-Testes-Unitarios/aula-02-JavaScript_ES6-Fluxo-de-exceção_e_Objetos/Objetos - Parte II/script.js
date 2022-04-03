@@ -97,4 +97,8 @@ const coolestTvShow = {
   console.log('Estudante 2');
   listSkills(student2);
 
+<<<<<<< HEAD
   //
+=======
+  
+>>>>>>> 8c0a0907994c652656fd8d0a40e17afb14706671
