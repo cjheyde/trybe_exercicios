@@ -5,7 +5,7 @@ import Pokedex from './components/Pokedex';
 class App extends Component {
 render() {
   return (
-  <div>
+  <div className="App">
     <h1>Pokedex</h1>
     <Pokedex />
   </div>
