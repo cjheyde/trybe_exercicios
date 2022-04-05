@@ -1,4 +1,4 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import "./Pokedex.css";
 import Pokemon from "./Pokemon";
 import pokemons from '../data';
