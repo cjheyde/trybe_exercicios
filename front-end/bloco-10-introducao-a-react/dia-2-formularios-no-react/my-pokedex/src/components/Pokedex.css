@@ -1,3 +1,7 @@
 .Pokedex {
-background-color: aqua;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
