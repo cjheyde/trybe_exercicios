@@ -3,16 +3,11 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  flex: 1 1 0;
-  min-width: 25%;
-  max-width: 35%;
-  height: 200px;
+  /* flex: 1 1 0; */
+  min-width: 50%;
+  min-height: 200px;
   margin: 10px;
   border: 1px solid gray;
   border-radius: 12px;
-  
-}
-
-img {
-width: 20%;
+  padding: 5%;
 }
