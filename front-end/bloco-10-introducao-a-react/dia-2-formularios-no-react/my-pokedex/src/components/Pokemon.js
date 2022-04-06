@@ -9,13 +9,11 @@ const { pokemon: { name, type, averageWeight, image } } = this.props;
   return (
   <div className="pokemon">
     <div>
-      <p>{` ${name} `}</p>
-      <p>{` ${type} `}</p>
+      <p>{`Name: ${name} `}</p>
+      <p>{`Type: ${type} `}</p>
       <p>{`Average weight: ${averageWeight.value} ${averageWeight.measurementUnit} `}</p>
     </div>
-    <div>
-      <img src={image} alt={`Imagem do Pokemon ${name}`}></img>
-    </div>
+      <img src={image} alt={`${name} Pokemon`}></img>
   </div>
   )
 }

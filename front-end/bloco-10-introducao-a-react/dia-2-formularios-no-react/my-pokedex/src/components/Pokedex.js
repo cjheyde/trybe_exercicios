@@ -9,6 +9,7 @@ render() {
     pokemons.map(e => (
       <div className="pokedex">
         <Pokemon key={e.id} pokemon={e} />
+        {/* {pokemons.map(e => <Pokemon key={e.id} pokemon={e} />)} */}
       </div>
 )));
 }}

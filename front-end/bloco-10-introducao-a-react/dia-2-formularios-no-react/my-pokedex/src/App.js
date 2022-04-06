@@ -10,7 +10,6 @@ render() {
     <Header />
     <Pokedex />
   </div>
-
   );
 }}
 
