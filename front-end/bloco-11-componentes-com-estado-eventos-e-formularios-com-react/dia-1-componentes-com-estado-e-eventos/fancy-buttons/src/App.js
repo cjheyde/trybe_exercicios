@@ -35,15 +35,22 @@ handleClick3() {
   console.log('Clicou no Botão 3!');
   this.setState((prevState) => ({
     numeroDeCliques3: prevState.numeroDeCliques3 + 1,
-  }));
+  }), () => {
+        console.log(`Botão 1 ${this.getButtonColor(this.state.numeroDeCliques3)}`);
+      });
+}
+
+getButtonColor(num) {
+  return num % 2 === 0 ? 'green' : 'yellow';
 }
 
   render() {
+        const { numeroDeCliques1, numeroDeCliques2, numeroDeCliques3 } = this.state;
     return (
     <>
-      <button onClick={this.handleClick1}>Botão 1 - {this.state.numeroDeCliques1} Cliques</button>
-      <button onClick={this.handleClick2}>Botão 2 - {this.state.numeroDeCliques2} Cliques</button>
-      <button onClick={this.handleClick3}>Botão 3 | Count = {this.state.numeroDeCliques3}</button>   
+      <button onClick={this.handleClick1} style={{ backgroundColor: this.getButtonColor(numeroDeCliques1) }}>Botão 1 - {this.state.numeroDeCliques1} Cliques</button>
+      <button onClick={this.handleClick2} style={{ backgroundColor: this.getButtonColor(numeroDeCliques2) }}>Botão 2 - {this.state.numeroDeCliques2} Cliques</button>
+      <button onClick={this.handleClick3} style={{ backgroundColor: this.getButtonColor(numeroDeCliques3) }}>Botão 3 | Count = {this.state.numeroDeCliques3}</button>   
     </>
     )
   }
