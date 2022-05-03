@@ -3,11 +3,23 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  /* flex: 1 1 0; */
-  min-width: 50%;
-  min-height: 200px;
-  margin: 10px;
+  flex: 2 1 0;
+  /* ref. Three values: flex-grow | flex-shrink | flex-basis - https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+  min-width: 25%;
   border: 1px solid gray;
   border-radius: 12px;
-  padding: 5%;
+  margin: 1%;
+  font-size: 1.5em;
+}
+
+img {
+min-width: 150px;
+}
+
+.pokemon:hover { 
+  color: rgb(60, 59, 59);
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px #5d5b5b;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* ref. https://www.w3schools.com/css/css3_shadows_box.asp */
 }
