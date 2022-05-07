@@ -1,134 +1,82 @@
-import React, { Component } from 'react'
-import './Form.css'
+ import React, { Component } from 'react';
+  import DataFieldset from './DataFieldset';
+  import PersonalFieldset from './PersonalFieldset';
 
-class Form extends Component {
-  constructor() {
-    super();
+  class Form extends Component {
+    constructor() {
+      super();
 
-    this.handleInputChange = this.handleInputChange.bind(this);
+      this.state = {
+        name: '',
+        email: '',
+        age: '',
+        anecdote: '',
+        terms: false,
+        formularioComErros: true,
+      };
 
-    this.state = {
-      exTextarea: '',
-      exSelect: 'coco',
-      email: '',
-    };
+      this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleError() {
+      const { name, email, age, anecdote, terms } = this.state;
+
+      const errorCases = [
+        !name.length,
+        !email.match(/^\S+@\S+$/i),
+        !age.length,
+        !anecdote.length,
+        !terms,
+      ];
+
+      const formularioPreenchido = errorCases.every((error) => error !== true);
+
+      this.setState({
+        formularioComErros: !formularioPreenchido,
+      });
+    }
+
+    handleChange({ target }) {
+      const { name } = target;
+      const value = (target.type === 'checkbox') ? target.checked : target.value;
+      this.setState({
+        [name]: value,
+      }, () => { this.handleError(); });
+    }
+
+    render() {
+      const { name, email, age, anecdote, terms, formularioComErros } = this.state;
+
+      return (
+        <div>
+          <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
+          <form className="form">
+            <PersonalFieldset
+              nameValue={ name }
+              emailValue={ email }
+              ageValue={ age }
+              handleChange={ this.handleChange }
+            />
+
+            <DataFieldset anecdoteValue={ anecdote } handleChange={ this.handleChange } />
+
+            <label htmlFor="terms">
+              <input
+                id="terms"
+                type="checkbox"
+                name="terms"
+                onChange={ this.handleChange }
+                value={ terms }
+              />
+              Concordo com termos e acordos
+            </label>
+          </form>
+          { formularioComErros
+            ? <span style={ { color: 'red' } }>Preencha todos os campos</span>
+            : <span style={ { color: 'green' } }>Todos campos foram preenchidos</span> }
+        </div>
+      );
+    }
   }
 
-  // handleInputChange(event) {
-  //   const target = event.target;
-  //   const value = target.type === 'checkbox' ? target.checked : target.value;
-  //   const name = target.name;
-
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // }
-
-    handleInputChange({ target }) {
-    const { name } = target;
-    const value = (target.type === 'checkbox') ? target.checked : target.value;
-    this.setState({
-      [name]: value,
-    });
-  }
-
-
-
-
-  render() {
-    return (
-      <div>
-        <h1>Exercícios 11.2</h1>
-        <form className="form">
-
-        <fieldset>
-
-          <label htmlFor="ano_nascimento">
-          Ano de Nascimento:
-          <input
-            id="ano_nascimento"
-            name="ano_nascimento"
-            type="number"
-            value={this.state.birthYear}
-            onChange={this.handleInputChange} 
-          />
-          </label>
-
-          <br/>
-
-          <label htmlFor="aprendi">
-          <input
-            id="aprendi"
-            name="aprendi"
-            type="checkbox"
-            value={this.state.aprendi}
-            onChange={this.handleInputChange} 
-          />
-          Aprendi!
-          </label>
-          </fieldset>
-          <br/>
-          <fieldset>
-          <label htmlFor="nome">
-          Seu Nome:
-          <input
-            type="text"
-            name="nome"
-            value={this.state.textName}
-            onChange={this.handleInputChange} 
-          />
-          </label>
-          <br/>
-          <label htmlFor="isGoing">
-          <input
-            name="isGoing"
-            type="checkbox"
-            checked={this.state.isGoing}
-            onChange={this.handleInputChange} 
-          />
-          Estão indo
-          </label>
-          <br/>
-          <label htmlFor="numberOfGuests">
-          Número de convidados:
-          <input
-            name="numberOfGuests"
-            type="number"
-            value={this.state.numberOfGuests}
-            onChange={this.handleInputChange} />
-          </label>
-          <br/>
-          <br/>
-          <label htmlFor="exTextarea">
-          Exemplo de TextArea:
-          <textarea name="exTextarea" value={this.state.exTextarea} onChange={this.handleInputChange} />
-          </label>
-          <br/>
-          <br/>
-          <label htmlFor="exSelect">
-          Exemplo de Select:
-          <select name="exSelect" value={this.state.exSelect} onChange={this.handleInputChange}>
-            <option value="laranja">Laranja</option>
-            <option value="limao">Limão</option>
-            <option value="coco">Coco</option>
-            <option value="manga">Manga</option>
-          </select>
-          </label>
-          <label htmlFor="email">
-          Email:
-          <input
-            id="email"
-            name="email"
-            type="email"
-            value={ this.state.email }
-            onChange={ this.handleInputChange }
-          />
-          </label>
-        </fieldset>
-        </form>
-      </div>
-    );
-  }
-}
-
-export default Form;
+  export default Form;
